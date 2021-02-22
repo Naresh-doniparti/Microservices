@@ -45,7 +45,7 @@ authorization & auditing which is required by most of the microservices can be p
 - It also acts as load balancer. You can choose the load balancer implementation which you want to integrate 
 with zuul. By default, it uses ribbon load balancer implementation
 
-## Feign Client
+## Feign Client (communication)
 - It simplifies the communication  with web microservices with a simple interface.
 - You just need an interface annotated with @FeignClient with the web service name that you want to communicate.
 Feign looks up into Eureka to identify the web service and communicates with it. It eliminates the boiler plate code
