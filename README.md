@@ -4,7 +4,7 @@ The microservice project is build using spring cloud with Eureka, hystrix, Zuul,
 starters.
 Since microservices has a distributed architecture, there can be many microservices, and each microservice can have many 
 instances, each microservice can communicate with multiple microservices. Since, there are a lot of components involved, 
-things could go wrong unless it is monitored properly. With the help of the tools that spring cloud provides we can
+things could go wrong unless it is monitored properly, With the help of the tools that spring cloud provides we can
 maintain the project much cleaner and much reliable way.
 
 ## Eureka (Service discovery)
