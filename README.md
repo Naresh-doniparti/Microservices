@@ -50,3 +50,9 @@ with zuul. By default, it uses ribbon load balancer implementation
 - You just need an interface annotated with @FeignClient with the web service name that you want to communicate.
 Feign looks up into Eureka to identify the web service and communicates with it. It eliminates the boiler plate code
   used for making those request calls.
+
+## Spring boot admin (collects the metrics)
+- Spring boot admin consolidates all the metrics collected from each microservice.
+- To make it work, every microservice has to stream all its metrics to spring boot admin by enabling all the 
+  actuator endpoints.
+- It gives us a unified view of all the metrics of all microservices in an application.

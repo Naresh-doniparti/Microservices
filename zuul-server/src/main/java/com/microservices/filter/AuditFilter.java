@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class AuditFilter extends ZuulFilter {
 
-    @Autowired
+    //@Autowired
     private AuditServiceFeignClient feignClient;
 
     @Override
@@ -36,8 +36,8 @@ public class AuditFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
-        String auditMessage = feignClient.getAudit();
-        System.out.println(auditMessage);
+       /* String auditMessage = feignClient.getAudit();
+        System.out.println(auditMessage);*/
         return null;
     }
 }
