@@ -19,7 +19,7 @@ and which one is down.
 - Eureka maintains a registry for microservices which registers themselves as eureka clients. It provides a dashboard 
 with the list of services that are registered to it.
 - Whenever an instance goes down, Eureka does not route the requests to that instance.
-- It can be used by other spring cloud components for the discovery of the service.
+- Eureka can also be used by other spring cloud components for the discovery of the service.
 
 ## Cloud Config server (Centralized configuration server)
  - It is a configuration server which points to central repository where the application configurations of microservices are maintained. 
