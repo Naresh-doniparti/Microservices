@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zuul-server
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+server:
+  port: 8000
+zuul:
+  ignored-services: '*'
+  routes:
+    employee-service:
+      path: /employees/**
+      sensitiveHeaders: null
+      serviceId: employee-service
+      stripPrefix: false

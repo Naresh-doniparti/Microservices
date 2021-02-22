@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS EMPLOYEE;
+CREATE TABLE EMPLOYEE(
+    id INT  PRIMARY KEY,
+    name VARCHAR(40) NOT NULL,
+    dob DATE NOT NULL,
+    salary DECIMAL NOT NULL
+);
+INSERT INTO EMPLOYEE (id, name, dob, salary) VALUES
+(1, 'Naresh', '1982-08-27', 1000000),
+(2, 'Naresh2', '1982-08-27', 2000000),
+(3, 'Naresh3', '1982-08-27', 3000000),
+(4, 'Naresh4', '1982-08-27', 4000000);

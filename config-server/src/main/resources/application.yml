@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/Naresh-doniparti/config-repo.git
+          skip-ssl-validation: true
+          timeout: 4
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
