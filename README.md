@@ -12,6 +12,10 @@ Eureka is used for registering microservices. Since a typical microservice proje
 service can have many instances. Unless they are registered somewhere. it is hard to track which service is available
 and which one is down.
 
+<div align="center">
+    <img src="/Eureka-serviceRegistry.PNG"</img> 
+</div>
+
 - Eureka maintains a registry for microservices which registers themselves as eureka clients. It provides a dashboard 
 with the list of services that are registered to it.
 - Whenever an instance goes down, Eureka does not route the requests to that instance.
@@ -26,6 +30,10 @@ with the list of services that are registered to it.
  - Microservices can register themselves as config clients to access their application configurations.
  - Application configurations can be changed without needing a restart
 
+<div align="center">
+    <img src="/Cloud-config-server.PNG"</img> 
+</div>
+
 ## Hystrix (Resiliency) 
 - It gives resiliency to your microservices. 
 - If you annotate a service call with @HystrixCommand annotation, hystrix will monitor the service call. Whenever it sees
@@ -36,7 +44,9 @@ with the list of services that are registered to it.
 - Hystrix also provides a dashboard which shows the state of services with Hystrix command annotation. It also shows whether the circuit is open/
 close. 
 _ For hystrix dashboard to work, you also need to enable the actuator for sending Hystix streams to the dashboard.   
-
+<div align="center">
+    <img src="/Hystrix-Stream.PNG" </img>  <img src="/Hystrix-circuitBreaker-dashboard.PNG"</img> 
+</div>
 
 ## Zuul (API gateway and load balancing)
 - Acts as an API gateway for microservices.
@@ -44,6 +54,9 @@ _ For hystrix dashboard to work, you also need to enable the actuator for sendin
 authorization & auditing which is required by most of the microservices can be placed here.
 - It also acts as load balancer. You can choose the load balancer implementation which you want to integrate 
 with zuul. By default, it uses ribbon load balancer implementation
+<div align="center">
+    <img src="/Zuul-ApiGateway-Routing.PNG" </img>  <img src="/Zuul-ApiGateway-Filtering.PNG"</img> 
+</div>
 
 ## Feign Client (communication)
 - It simplifies the communication  with web microservices with a simple interface.
@@ -56,3 +69,6 @@ Feign looks up into Eureka to identify the web service and communicates with it.
 - To make it work, every microservice has to stream all its metrics to spring boot admin by enabling all the 
   actuator endpoints.
 - It gives us a unified view of all the metrics of all microservices in an application.
+<div align="center">
+    <img src="/SpringbootAdmin-dashboard.PNG" </img>  <img src="/SpringbootAdmin-Metrics.PNG"</img> 
+</div>
