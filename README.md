@@ -1,6 +1,6 @@
 # Microservices with Spring boot
 
-The microservice project is build using spring cloud with Eureka, Zuul, Cloud Config server, boot admin, zipkin and ELK 
+The microservice project is build using spring cloud with Eureka, hystrix, Zuul, Cloud Config server and spring boot admin 
 starters.
 Since microservices has a distributed architecture, there can be many microservices, and each microservice can have many 
 instances, each microservice can communicate with multiple microservices. Since, there are a lot of components involved, 
