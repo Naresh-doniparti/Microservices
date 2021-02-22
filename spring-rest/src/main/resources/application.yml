@@ -1,3 +1,6 @@
-hystrix:
-  dashboard:
-    proxy-stream-allow-list: '*'
+spring:
+  application:
+    name: employee-service
+  cloud:
+    config:
+      uri: http://localhost:8888/
