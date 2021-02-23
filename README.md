@@ -16,7 +16,7 @@ and which one is down.
 with the list of services that are registered to it.
 - Whenever an instance goes down, Eureka does not route the requests to that instance.
 - It can be used by other spring cloud components for the discovery of the service.
-
+  ![image] (https://github.com/Naresh-doniparti/Microservices/blob/master/Eureka-serviceRegistry.PNG)
 ## Cloud Config server (Centralized configuration server)
  - It is a configuration server which points to central repository where the application configurations of microservices are maintained. 
    The central repository can be for example github. 
