@@ -1,0 +1,2 @@
+com/microservices/SpringEurekaServerApplicationTests.java
+ com.microservices.SpringEurekaServerApplicationTests

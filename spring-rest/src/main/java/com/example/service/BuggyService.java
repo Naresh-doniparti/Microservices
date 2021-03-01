@@ -19,15 +19,8 @@ public class BuggyService {
 
     @HystrixCommand(fallbackMethod = "fallBackMethodForBuggyService")
     public String sendItToExternalService(Employee employee){
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<String> httpEntity =
-                new HttpEntity<>(employee.toString(), httpHeaders);
-    /*    ResponseEntity<String> response = restTemplate.exchange("http://localhost:4567/deadService",
-                HttpMethod.POST,
-                httpEntity,
-                String.class);
-    */    employeeRepository.save(employee);
+
+        employeeRepository.save(employee);
         return "Saved the details successfully";
     }
 

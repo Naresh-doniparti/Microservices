@@ -1,8 +1,16 @@
 spring:
   application:
     name: audit-service
-  cloud:
-    config:
-      uri: http://localhost:8888/
+  data:
+    cassandra:
+      local-datacenter: datacenter1
+      keyspace-name: my_cassandra_test
+      port: 9042
+      contact-points: 127.0.0.1
+      username: cassandra
+      password: cassandra
+  #cloud:
+  #  config:
+  #    uri: http://localhost:8888/
 server:
   port: 8081

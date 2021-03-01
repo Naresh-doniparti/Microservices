@@ -1,12 +1,25 @@
 spring:
   application:
-    name: zuul-server
+    name: api-gateway
   cloud:
     loadbalancer:
       ribbon:
         enabled: false
+  #Authentication DB
+  data:
+    cassandra:
+      schema-action: create_if_not_exists
+      port: 9042
+      keyspace-name: my_cassandra_test
+      username: cassandra
+      password: cassandra
+      local-datacenter: datacenter1
+      contact-pointas:
+        - 127.0.0.1
 server:
   port: 8000
+
+#Gateway
 zuul:
   ignored-services: '*'
   routes:
@@ -14,4 +27,9 @@ zuul:
       path: /employees/**
       sensitiveHeaders: null
       serviceId: employee-service
+      stripPrefix: false
+    audit-service:
+      path: /audit/**
+      sensitiveHeaders: null
+      serviceId: audit-service
       stripPrefix: false
